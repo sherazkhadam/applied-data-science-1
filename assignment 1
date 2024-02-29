@@ -7,8 +7,8 @@ print(z)
 
 plot.hist(z['Weight'], bins=8, color='blue', edgecolor='black')
 plot.xlabel('Weight')
-plot.ylabel('values by id')
-plot.title('bread vs values by id')
+plot.ylabel('weight by values')
+plot.title('different weight of apple')
 plot.show()
 
 plot.scatter(z['Weight'], z['Size'], color='green')
