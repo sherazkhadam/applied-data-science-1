@@ -1,0 +1,25 @@
+import pandas as ps
+import numpy as np
+import seaborn as sb
+import matplotlib.pyplot as plot
+z = ps.read_csv("C:/Users/DELL/desktop/apple_quality.csv")
+print(z)
+
+plot.hist(z['Weight'], bins=8, color='blue', edgecolor='black')
+plot.xlabel('Weight')
+plot.ylabel('values by id')
+plot.title('bread vs values by id')
+plot.show()
+
+plot.scatter(z['Weight'], z['Size'], color='green')
+plot.xlabel('weight')
+plot.ylabel('size')
+plot.title('weight vs size')
+plot.show()
+
+cor_mat =z.corr()
+print(cor_mat)
+
+sb.heatmap(cor_mat, annot=True, cmap='coolwarm')
+plot.title('Correlation Matrix')
+plot.show()
